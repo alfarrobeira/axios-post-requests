@@ -8,9 +8,19 @@ export default function App() {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    fetch("https://jsonplaceholder.typicode.com/posts")
-      .then((response) => response.json())
-      .then((dataPosts) => setPosts(dataPosts));
+    async function fetchData() {
+      const response = await fetch(
+        "https://jsonplaceholder.typicode.com/posts"
+      );
+      const data = await response.json();
+      setPosts(data);
+    }
+    fetchData();
+    
+    // // compared to using ".then"
+    // fetch("https://jsonplaceholder.typicode.com/posts")
+    //   .then((response) => response.json())
+    //   .then((dataPosts) => setPosts(dataPosts));
   }, []);
 
   return (
