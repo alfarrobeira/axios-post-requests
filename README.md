@@ -1,6 +1,6 @@
 # Axios Post Requests
 
-Beginner's project to learn the usage of the React hooks `useEffect` and `useState`.
+Beginner's project to learn GETting and POSTing data from/ to an API.
 
 ## Description
 A complete project description can be found in the codesandbox: https://codesandbox.io/s/react-form-axios-post-requests-3brbpq
